@@ -5,3 +5,4 @@ const Color appSecondaryColor = Color(0xFF1D1D1D);
 const Color appGreyColor = Color(0xFFBFBFBF);
 const Color appSeconaryGreyColor = Color(0xFFF1F1F1);
 const Color appBorderGreyColor = Color(0xFFE0E0E0);
+const Color appTextGreyColor = Color(0xFF5F5F5F);
