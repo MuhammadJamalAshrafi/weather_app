@@ -11,4 +11,5 @@ class Assets {
   static String dropDownIcon = '${Constants.imageAssetPath}drop_down_icon.png';
   static String refreshIcon = '${Constants.imageAssetPath}refresh_icon.png';
   static String weatherIcon = '${Constants.imageAssetPath}weather_icon.png';
+  static String rightArrow = '${Constants.imageAssetPath}right-arrow.png';
 }

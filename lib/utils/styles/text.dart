@@ -15,4 +15,4 @@ TextStyle paragraph1 = GoogleFonts.poppins(
 );
 
 TextStyle paragraph2 = GoogleFonts.poppins(
-    fontSize: 200, fontWeight: FontWeight.w500, color: Colors.black);
+    fontSize: 20, fontWeight: FontWeight.w500, color: Colors.black);
