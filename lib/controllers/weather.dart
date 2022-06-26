@@ -5,14 +5,15 @@ import 'package:intl/intl.dart';
 
 class WeatherController {
   late String cityName, countryName, weatherText, temperature;
-  getWeather() async {
-    WeatherResponse weatherResponse = await ApiService.getWeather();
+  getWeather(String param) async {
+    print(param);
+    WeatherResponse weatherResponse = await ApiService.getWeather(param);
     cityName = weatherResponse.location!.name!;
     countryName = weatherResponse.location!.country!;
     weatherText = weatherResponse.current!.condition!.text!;
     temperature = weatherResponse.current!.tempC!.toStringAsFixed(0);
     int time = DateTime.now().hour;
-    forecastItems = List.generate(7, (index) {
+    forecastItems = List.generate(5, (index) {
       if (index == 0) {
         return {
           "time": 'now',

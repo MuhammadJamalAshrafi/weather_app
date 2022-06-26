@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:weather_app/controllers/weather.dart';
 import 'package:weather_app/models/weather_response.dart';
+import 'package:weather_app/services/geo_location.dart';
 import 'package:weather_app/utils/assets.dart';
 import 'package:weather_app/utils/styles/text.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -25,7 +26,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   _loadData() async {
-    await _weatherController.getWeather();
+    print(GeoLocation().location.toString());
+    await _weatherController.getWeather(GeoLocation().location);
     setState(() {
       isLoading = !isLoading;
     });

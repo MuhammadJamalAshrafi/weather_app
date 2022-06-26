@@ -17,7 +17,7 @@ Route<dynamic> controller(RouteSettings settings) {
     case selectionScreen:
       return MaterialPageRoute(builder: (context) => const SelectionScreen());
     case homeScreen:
-      return MaterialPageRoute(builder: (context) => HomeScreen());
+      return MaterialPageRoute(builder: (context) => const HomeScreen());
 
     default:
       throw ('This route name does not exit');

@@ -7,9 +7,9 @@ class ApiService {
 
   static ApiService get instance => _instance;
 
-  static Future<WeatherResponse> getWeather() async {
+  static Future<WeatherResponse> getWeather(String param) async {
     try {
-      Map<String, dynamic> json = await ApiClient.instance.get("Karachi");
+      Map<String, dynamic> json = await ApiClient.instance.get(param);
       return WeatherResponse.fromJson(json);
     } catch (e) {
       throw e.toString();
